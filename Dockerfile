@@ -6,7 +6,7 @@ COPY requirements.txt /tmp/
 
 # runtime dependencies list
 RUN apt-get update && \ 
-    apt-get install -y --no-install-recommends unzip && \
+    apt-get install -y --no-install-recommends unzip wget && \
     rm -rf /var/lib/apt/lists/* && \
     pip install -r /tmp/requirements.txt
 
