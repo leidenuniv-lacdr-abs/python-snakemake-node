@@ -8,4 +8,8 @@ COPY requirements.txt /tmp/
 RUN apt-get update && \ 
     apt-get install -y --no-install-recommends unzip && \
     rm -rf /var/lib/apt/lists/* && \
-    pip install -r /tmp/requirements.txt
+    pip3 install -r /tmp/requirements.txt && \
+    python3 --version && \
+    pip3 --version && \
+    python --version && \
+    pip --version
